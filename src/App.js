@@ -2,7 +2,9 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Header from './Header'
+import Header from './components/Header'
+import CartItems from './components/CartItems';
+import CartTotal from './components/CartTotal';
 
 
 function App() {
@@ -12,13 +14,8 @@ function App() {
       <Header title="Amazon Cart"/>
       {/* create main component */}
       <div className="App-main">
-        <div className="CartItems">
-          <h1>Shopping Cart</h1>
-
-        </div>
-        <div className="CartTotal">
-
-        </div>
+       <CartItems />
+       <CartTotal />
       </div>
     </div>
   );
