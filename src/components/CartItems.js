@@ -9,7 +9,16 @@ function CartItems({ items }) {
             <h1>Shopping Cart</h1>
             <hr />
             <div className="CartItems-items">
-                <CartItem />
+               {items.map((item, index) =>
+               <CartItem
+                item={item} // pass the item into cartItem
+                key={index} // this is how react track small changes
+
+
+               />
+               ) }
+               
+                
             </div>
         </div>
     )
