@@ -18,7 +18,7 @@ const [ cartItems, setCartItems ] = useState(data);
       {/* create main component */}
       <div className="App-main">
        <CartItems items={cartItems}/>
-       <CartTotal />
+       <CartTotal items={cartItems}/> 
       </div>
     </div>
   );
