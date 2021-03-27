@@ -15,10 +15,19 @@ function CartTotal({ items }) {
         })
         return total;
     }
+
+    const getTotalItem =() => {
+        let total = 0;
+        items.forEach((item)=> {
+            total += item.quantity;
+        })
+        return total;
+    }
+
     return (
         <div className="CartTotal">
             <h3>
-                Subtotal({items.length} items):
+                Subtotal({getTotalItem()} items):
                 <span className="CartTotal-price">
                     ${getTotalPrice()}
                 </span>
