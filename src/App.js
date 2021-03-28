@@ -17,7 +17,7 @@ const [ cartItems, setCartItems ] = useState(data);
       <Header title="Amazon Cart"/>
       {/* create main component */}
       <div className="App-main">
-       <CartItems items={cartItems}/>
+       <CartItems items={cartItems} setCartItems={setCartItems}/>
        <CartTotal items={cartItems}/> 
       </div>
     </div>
