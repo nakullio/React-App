@@ -16,7 +16,16 @@ function CartItems({ items, setCartItems }) {
 
     }
 
-
+       const deleteItem= (indexToDelete) => {
+        //  filter out the items where the item index does not equal to the selected item
+           const newItems = items.filter((value, index) => {
+            return index !== indexToDelete
+           })
+           console.log(newItems);
+           setCartItems(newItems);
+       }
+  
+   
     return (
         <div className="CartItems">
             <h1>Shopping Cart</h1>
@@ -28,6 +37,7 @@ function CartItems({ items, setCartItems }) {
                 item={item} // pass the item into cartItem
                 key={index} // this is how react track small changes
                 changeItemQuantity={changeItemQuantity}
+                deleteItem={deleteItem}
 
 
                />

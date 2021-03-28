@@ -17,18 +17,18 @@ function CartTotal({ items }) {
         return total;
     }
 
-    const getTotalItem =() => {
-        let total = 0;
-        items.forEach((item)=> {
-            total += item.quantity;
-        })
-        return total;
-    }
+    // const getTotalItem =() => {
+    //     let total = 0;
+    //     items.forEach((item)=> {
+    //         total += item.quantity;
+    //     })
+    //     return total;
+    // }
 
     return (
         <div className="CartTotal">
             <h3>
-                Subtotal({getTotalItem()} items):
+                Subtotal({items.length} items):
                 <span className="CartTotal-price">
                     <NumberFormat value={getTotalPrice()} displayType={'text'} thousandSeparator={true} prefix={'$'} decimalScale={2}/>
                 </span>
