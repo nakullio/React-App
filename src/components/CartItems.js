@@ -21,7 +21,6 @@ function CartItems({ items, setCartItems }) {
            const newItems = items.filter((value, index) => {
             return index !== indexToDelete
            })
-           console.log(newItems);
            setCartItems(newItems);
        }
   
